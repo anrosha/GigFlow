@@ -64,8 +64,8 @@ body {
   margin-bottom: 24px;
 }
 .app-header .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
-.theme-toggle { background: rgba(255,255,255,.15); color: #fff; border-color: rgba(255,255,255,.4); }
-.theme-toggle:hover { background: rgba(255,255,255,.25); }
+.btn.theme-toggle { background: rgba(255,255,255,.15); color: #fff; border-color: rgba(255,255,255,.4); }
+.btn.theme-toggle:hover { background: rgba(255,255,255,.25); }
 .app-header h1 { margin: 0; font-size: 1.8rem; }
 .app-header p { margin: 4px 0 0; opacity: .85; }
 
