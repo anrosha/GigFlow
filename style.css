@@ -6,14 +6,14 @@
   --border: #dfe3ee;
   --primary: #7a1530;
   --primary-dark: #5c0a1e;
-  --danger: #d33a4a;
-  --inquiry: #2f7fd8;
+  --danger: #bd2535;
+  --inquiry: #1a5fb0;
   --inquiry-bg: #e3effc;
-  --offer: #c77b00;
+  --offer: #8a5200;
   --offer-bg: #fff1d6;
-  --confirmed: #1f9254;
+  --confirmed: #146c3c;
   --confirmed-bg: #dcf5e7;
-  --cancelled: #c0392b;
+  --cancelled: #a82e21;
   --cancelled-bg: #fbe4e1;
   --input-bg: #ffffff;
   --hover: #f0f2f8;
@@ -46,6 +46,8 @@
 }
 
 * { box-sizing: border-box; }
+
+.booking, .booking * , .upcoming-list li { overflow-wrap: anywhere; }
 
 body {
   margin: 0;
