@@ -4,6 +4,29 @@
   var STORAGE_KEY = 'gigflow.bookings';
   var STATUSES = ['Inquiry', 'Offer Sent', 'Confirmed', 'Cancelled'];
 
+  var THEME_KEY = 'gigflow.theme';
+  var themeBtn = document.getElementById('theme-toggle');
+
+  function currentTheme() {
+    try {
+      var t = localStorage.getItem(THEME_KEY);
+      if (t === 'dark' || t === 'light') return t;
+    } catch (e) {}
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+
+  function applyTheme(t) {
+    document.documentElement.setAttribute('data-theme', t);
+    themeBtn.textContent = t === 'dark' ? 'Light Mode' : 'Dark Mode';
+  }
+
+  applyTheme(currentTheme());
+  themeBtn.addEventListener('click', function () {
+    var t = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    try { localStorage.setItem(THEME_KEY, t); } catch (e) {}
+    applyTheme(t);
+  });
+
   var bookings = load();
 
   var form = document.getElementById('booking-form');
